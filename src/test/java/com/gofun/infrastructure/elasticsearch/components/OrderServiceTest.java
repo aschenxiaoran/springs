@@ -7,18 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes =OrderServiceConfig.class )
+@ContextConfiguration(classes = OrderServiceConfig.class )
 public class OrderServiceTest {
 
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private OrderItemService orderItemService;
+
     @Test
     public void play() {
-        orderService.play();
-        Assert.assertNotNull(orderService);
+        boolean result=orderService.getOrderItemService()==orderItemService;
+        System.out.println(result ? "同一个orderitemservice" : "不同的orderitemservice");
+        Assert.assertTrue(result);
     }
 }
