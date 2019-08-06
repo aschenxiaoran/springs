@@ -14,11 +14,13 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println("对象："+beanName+"开始初始化");
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println("对象："+beanName+"初始化完成");
         return bean;
     }
 
