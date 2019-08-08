@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="BeanList" class="com.xiaoran.springs.beanList.BeanList">
+
+        <property  name="customList">
+            <list>
+               <value>INDIA</value>
+               <value>Pakistan</value>
+               <value>USA</value>
+               <value>UK</value>
+            </list>
+          </property>
+    </bean>
+
+</beans>
